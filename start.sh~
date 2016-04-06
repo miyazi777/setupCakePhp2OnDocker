@@ -1,3 +1,0 @@
-#!/bin/sh
-
-docker stop cakephp2_web_1
