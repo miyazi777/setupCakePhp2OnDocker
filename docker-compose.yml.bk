@@ -1,0 +1,18 @@
+web:
+    image: cakephp
+    volumes:
+        - /Users/miyajimatakeshi/study/docker-compose/work/:/var/www/cakephp
+    ports:
+        - "80:80"
+db:
+    image: mysql:5.7.7
+    volumes_from:
+        - dbdata
+    environment:
+        MYSQL_ROOT_PASSWORD: root
+    ports:
+        - "3306:3306"
+dbdata:
+    image: busybox
+    volumes:
+        - /var/lib/mysql
